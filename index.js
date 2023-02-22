@@ -13,7 +13,8 @@ const urls = (await readFile(path.join(__dirname, 'input.txt'), 'utf-8')).split(
 (async function iify() {
     let driver = await new Builder()
     .forBrowser(Browser.CHROME)
-    .setChromeOptions(new chrome.Options().headless())
+    // Uncomment the below when for working in a headless environment
+    // .setChromeOptions(new chrome.Options().headless())
     .build();
 
     try {
